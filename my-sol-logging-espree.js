@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { version, description } = require('../package.json');
+const { version, description } = require('./package.json');
 const fs = require('fs');
 const program = require('commander');
 const esprima = require('espree');
