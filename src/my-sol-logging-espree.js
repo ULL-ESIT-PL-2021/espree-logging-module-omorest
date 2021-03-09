@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 const esprima = require('espree');
 const estraverse = require('estraverse');
 let escodegen = require('escodegen');
