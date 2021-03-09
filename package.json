@@ -30,7 +30,7 @@
   },
   "version": "0.2.0",
   "description": "Páctice 3 npm module addlogging",
-  "main": "./my-sol-logging-espree.js",
+  "main": "./src/my-sol-logging-espree.js",
   "module": "./main.js",
   "devDependencies": {
     "chai": "^4.3.3",
