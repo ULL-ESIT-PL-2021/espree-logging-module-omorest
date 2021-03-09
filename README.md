@@ -8,6 +8,7 @@ This is an awesome library that add logs before your code in functions.
     - [Commands](#commands)
     - [Import to use](#import-to-use)
     - [Method](#method)
+  - [Example](#example)
   - [License](#license)
 
 ## Installation
@@ -138,6 +139,33 @@ const output = addLogging(input, 'suma')
 ```
 
 The variable output contain the string with the code with a new line of log.
+
+## Example
+
+**Code**
+
+```js
+const { addLogging } = require('@alu0101209067/addlogging');
+
+const sum = function suma(a, b) {
+  return a + b;
+}
+
+const output = addLogging(sum, 'suma')
+
+console.log(output)
+```
+
+**Output**
+
+```console
+ ~ node src/add.js 
+ 
+  function suma(a, b) {
+      console.log(`Entering suma(${ a },${ b }) at line 1`);
+      return a + b;
+  }
+```
 
 ___
 
