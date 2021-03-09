@@ -10,14 +10,20 @@ let escodegen = require('escodegen');
  * @param  {string} code
  * @returns {}
  */
-module.exports.addLogging = function(code) {
+module.exports.addLogging = function(code, pattern = '') {
 	let ast = esprima.parse(code, {ecmaVersion: 6, loc : true});
 	estraverse.traverse(ast, {
 		enter: function(node, parent) {
 			if (node.type === 'FunctionDeclaration' ||
-				node.type === 'FunctionExpression' ||
-				node.type === 'ArrowFunctionExpression') {
-				addBeforeCode(node);
+					node.type === 'FunctionExpression' 	||
+					node.type === 'ArrowFunctionExpression') {
+					if (!pattern 
+							|| (node.id === null && parent.id.name.match(pattern)) 
+							|| node.id 
+							&& node.id.name.match(pattern)) 
+					{
+								addBeforeCode(node);
+					}
 			}
 		}
 	});
