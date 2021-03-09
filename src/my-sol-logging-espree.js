@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-const { version, description } = require('./package.json');
-const fs = require('fs');
-const program = require('commander');
 const esprima = require('espree');
 const estraverse = require('estraverse');
 let escodegen = require('escodegen');
-const { ifError } = require('assert');
 
 
-
+/**
+ * Function that recive a code like a string and then create a code
+ * @param  {string} code
+ * @returns {}
+ */
 module.exports.addLogging = function(code) {
 	let ast = esprima.parse(code, {ecmaVersion: 6, loc : true});
 	estraverse.traverse(ast, {
@@ -25,7 +25,11 @@ module.exports.addLogging = function(code) {
 }
 
 
-
+/**
+ * Function that recive a node add one line of code before code
+ * @param  {} node
+ * @returns {void}
+ */
 function addBeforeCode(node) {
 	let name = node.id ? node.id.name : '<anonymous function>';
 	const params = node.params.map(param =>`\$\{${param.name}\}`);

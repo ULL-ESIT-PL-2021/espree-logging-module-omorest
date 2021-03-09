@@ -1,8 +1,4 @@
-// Set options as a parameter, environment variable, or rc file.
-// eslint-disable-next-line no-global-assign
-require = require("esm")(module/* , options */)
-let {addLogging} = require('../my-sol-logging-espree');
-const { assert } = require('chai');
+let {addLogging} = require('../src/my-sol-logging-espree');
 let chai = require('chai');
 let should = chai.should();
 
