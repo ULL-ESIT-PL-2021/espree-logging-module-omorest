@@ -147,9 +147,9 @@ The variable output contain the string with the code with a new line of log.
 ```js
 const { addLogging } = require('@alu0101209067/addlogging');
 
-const sum = function suma(a, b) {
+const sum = `function suma(a, b) {
   return a + b;
-}
+}`
 
 const output = addLogging(sum, 'suma')
 
@@ -160,7 +160,7 @@ console.log(output)
 
 ```console
  ~ node src/add.js 
- 
+
   function suma(a, b) {
       console.log(`Entering suma(${ a },${ b }) at line 1`);
       return a + b;
