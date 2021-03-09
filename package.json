@@ -12,7 +12,7 @@
     "publish": "git ci -am modified && git push origin master",
     "private": "git ci -am private && git push private private",
     "test": "mocha --reporter spec",
-    "jsdoc": "jsdoc ./my-sol-logging-espree.js"
+    "jsdoc": "jsdoc ./src/my-sol-logging-espree.js"
   },
   "dependencies": {
     "acorn": "^7.1.0",

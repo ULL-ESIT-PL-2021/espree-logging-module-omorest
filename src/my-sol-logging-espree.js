@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+
 const esprima = require('espree');
 const estraverse = require('estraverse');
 let escodegen = require('escodegen');
@@ -8,7 +9,7 @@ let escodegen = require('escodegen');
 /**
  * Function that recive a code like a string and then create a code
  * @param  {string} code
- * @returns {}
+ * @returns {string}
  */
 module.exports.addLogging = function(code, pattern = '') {
 	let ast = esprima.parse(code, {ecmaVersion: 6, loc : true});
