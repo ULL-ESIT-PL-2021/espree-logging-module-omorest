@@ -6,6 +6,9 @@ This is an awesome library that add logs before your code in functions.
   - [Installation](#installation)
   - [Usage](#usage)
     - [Commands](#commands)
+    - [Import to use](#import-to-use)
+    - [Method](#method)
+  - [License](#license)
 
 ## Installation
 
@@ -114,3 +117,28 @@ ___
   ```
 
 <br>
+
+### Import to use
+
+```js
+const { addLogging } = require('@alu0101209067/addlogging');
+```
+
+### Method
+
+This method add new line of log before your code in functions and return a new string.
+
+It receives 2 parameters:
+
+  - **Code: {string}**  code to read and find functions to write the new line
+  - **Pattern: {string}** word you want to choose, and find only functions match with that word.  
+
+```js
+const output = addLogging(input, 'suma')
+```
+
+The variable output contain the string with the code with a new line of log.
+
+___
+
+## License
