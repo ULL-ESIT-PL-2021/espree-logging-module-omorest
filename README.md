@@ -142,3 +142,5 @@ The variable output contain the string with the code with a new line of log.
 ___
 
 ## License
+
+[MIT](./LICENSE)
