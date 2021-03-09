@@ -2,6 +2,9 @@
 
 This is an awesome library that add logs before your code in functions.
 
+- [API Documentation](https://ull-esit-pl-2021.github.io/espree-logging-module-omorest/)
+
+___
 - [AddLogging](#addlogging)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -10,6 +13,7 @@ This is an awesome library that add logs before your code in functions.
     - [Method](#method)
   - [Example](#example)
   - [License](#license)
+___
 
 ## Installation
 
