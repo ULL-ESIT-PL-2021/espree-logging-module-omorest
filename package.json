@@ -4,6 +4,7 @@
   "bin": {
     "add-logging": "bin/exec.js"
   },
+  "keywords": ["ULL", "2020/2021", "PL", "Procesadores de Lenguajes"],
   "scripts": {
     "sh": "node --inspect-brk syntax-highlight.js",
     "grep": "node --inspect-brk idgrep.js hacky.js",
